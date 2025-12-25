@@ -165,7 +165,7 @@ body {
 }
 
 @property --ascii-loader {
-    syntax: 'off | system24 | cats | astral';
+    syntax: 'off | system24 | cats | astral | astralA';
     inherits: false;
     initial-value: system24;
 }
@@ -217,7 +217,7 @@ body {
     }
 }
 
-@container body style(--ascii-loader: astral) {
+@container body style(--ascii-loader: astralA) {
     .a2f5142ba8328dfd-content {
         display: flex;
         flex-direction: column;
@@ -267,6 +267,43 @@ body {
     @keyframes gradientFlow {
         0% { background-position: 0 0, 0 0; }
         100% { background-position: 0 0, 300% 0; }
+    }
+}
+
+@container body style(--ascii-loader: astral) {
+    .a2f5142ba8328dfd-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .a2f5142ba8328dfd-content > .a2f5142ba8328dfd-spinner {
+        display: none;
+    }
+    
+    .a2f5142ba8328dfd-content::before {
+        content: ' ▄▄▄▄▄▄▄ ▄▄▄ ▄▄▄▄▄▄▄ ▄▄▄ ▄▄▄    ▄▄   ▄▄ ▄▄▄▄▄ ▄▄▄▄▄ ▄▄   ▄▄ ▄▄▄▄▄ ▄▄▄▄▄ ▄▄▄ ▄▄▄▄▄▄▄ \A █       █   █       █   █   █  █  █ █  █      █      █  █ █  █      █       █   █       █\A █▄▄▄▄   █   █    ▄▄▄█   █   █  █  █▄█  █  █      █      █  █▄█  █      █       █   █    ▄▄▄█\A        █   █   █▄▄▄   █   █   █  █       █  █      █      █       █      █       █   █   █▄▄▄ \A  ▄▄▄▄▄  █   █    ▄▄▄█   █   █▄▄█  █       █  █      █      █   ▄   █      █       █   █    ▄▄▄█\A  █▄▄▄▄▄▄█   █   █▄▄▄   █   █       █       █  █      █      █  █ █  █      █       █   █   █▄▄▄ \A ▀▀▀▀▀▀▀ ▀▀▀ ▀▀▀▀▀▀▀ ▀▀▀ ▀▀▀▀▀▀▀ ▀▀▀     ▀▀▀  ▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀ ▀▀▀   ▀▀▀ ▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀ ▀▀▀ ▀▀▀▀▀▀▀ \A \A\A ▄▄   ▄▄ ▄▄▄▄▄ ▄▄▄▄▄ ▄▄   ▄▄ ▄▄▄▄▄ ▄▄▄▄▄ ▄▄▄ ▄▄▄▄▄▄▄ \A █  █ █  █      █      █  █ █  █      █       █   █       █\A █  █▄█  █      █      █  █▄█  █      █       █   █    ▄▄▄█\A █       █      █      █       █      █       █   █   █▄▄▄ \A █       █      █      █   ▄   █      █       █   █    ▄▄▄█\A █       █      █      █  █ █  █      █       █   █   █▄▄▄ \A ▀▀▀     ▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀ ▀▀▀   ▀▀▀ ▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀ ▀▀▀ ▀▀▀▀▀▀▀ ';
+        display: block;
+        font-size: 10px;
+        font-family: 'Courier New', monospace;
+        font-weight: bold;
+        white-space: pre;
+        line-height: 1;
+        background: linear-gradient(to right, 
+            var(--purple-2) 0%, 
+            var(--blue-2) 25%, 
+            var(--accent-2) 50%, 
+            var(--blue-2) 75%, 
+            var(--purple-2) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 300% auto;
+        animation: textShine 3s ease-in-out infinite;
+    }
+    
+    .a2f5142ba8328dfd-text {
+        position: static;
     }
 }
 

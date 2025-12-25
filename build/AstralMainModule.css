@@ -165,7 +165,7 @@ body {
 }
 
 @property --ascii-loader {
-    syntax: 'off | system24 | cats | astral | astralA';
+    syntax: 'off | system24 | cats | astral | astralA | astralCosmic';
     inherits: false;
     initial-value: system24;
 }
@@ -283,27 +283,177 @@ body {
     }
     
     .a2f5142ba8328dfd-content::before {
-        content: ' ▄▄▄▄▄▄▄ ▄▄▄ ▄▄▄▄▄▄▄ ▄▄▄ ▄▄▄    ▄▄   ▄▄ ▄▄▄▄▄ ▄▄▄▄▄ ▄▄   ▄▄ ▄▄▄▄▄ ▄▄▄▄▄ ▄▄▄ ▄▄▄▄▄▄▄ \A █       █   █       █   █   █  █  █ █  █      █      █  █ █  █      █       █   █       █\A █▄▄▄▄   █   █    ▄▄▄█   █   █  █  █▄█  █  █      █      █  █▄█  █      █       █   █    ▄▄▄█\A        █   █   █▄▄▄   █   █   █  █       █  █      █      █       █      █       █   █   █▄▄▄ \A  ▄▄▄▄▄  █   █    ▄▄▄█   █   █▄▄█  █       █  █      █      █   ▄   █      █       █   █    ▄▄▄█\A  █▄▄▄▄▄▄█   █   █▄▄▄   █   █       █       █  █      █      █  █ █  █      █       █   █   █▄▄▄ \A ▀▀▀▀▀▀▀ ▀▀▀ ▀▀▀▀▀▀▀ ▀▀▀ ▀▀▀▀▀▀▀ ▀▀▀     ▀▀▀  ▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀ ▀▀▀   ▀▀▀ ▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀ ▀▀▀ ▀▀▀▀▀▀▀ \A \A\A ▄▄   ▄▄ ▄▄▄▄▄ ▄▄▄▄▄ ▄▄   ▄▄ ▄▄▄▄▄ ▄▄▄▄▄ ▄▄▄ ▄▄▄▄▄▄▄ \A █  █ █  █      █      █  █ █  █      █       █   █       █\A █  █▄█  █      █      █  █▄█  █      █       █   █    ▄▄▄█\A █       █      █      █       █      █       █   █   █▄▄▄ \A █       █      █      █   ▄   █      █       █   █    ▄▄▄█\A █       █      █      █  █ █  █      █       █   █   █▄▄▄ \A ▀▀▀     ▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀ ▀▀▀   ▀▀▀ ▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀ ▀▀▀ ▀▀▀▀▀▀▀ ';
+        content: ' ______     ______     ______   ______     ______     __            __         ______     __  __     __   __     ______     __  __     ______     ______    \A/\  __ \   /\  ___\   /\__  _\ /\  == \   /\  __ \   /\ \          /\ \       /\  __ \   /\ \/\ \   /\ "-.\ \   /\  ___\   /\ \_\ \   /\  ___\   /\  == \   \A\ \  __ \  \ \___  \  \/_/\ \/ \ \  __<   \ \  __ \  \ \ \____     \ \ \____  \ \  __ \  \ \ \_\ \  \ \ \-.  \  \ \ \____  \ \  __ \  \ \  __\   \ \  __<   \A \ \_\ \_\  \/\_____\    \ \_\  \ \_\ \_\  \ \_\ \_\  \ \_____\     \ \_____\  \ \_\ \_\  \ \_____\  \ \_\\"\_\  \ \_____\  \ \_\ \_\  \ \_____\  \ \_\ \_\ \A  \/_/\/_/   \/_____/     \/_/   \/_/ /_/   \/_/\/_/   \/_____/      \/_____/   \/_/\/_/   \/_____/   \/_/ \/_/   \/_____/   \/_/\/_/   \/_____/   \/_/ /_/ ';
         display: block;
         font-size: 10px;
         font-family: 'Courier New', monospace;
         font-weight: bold;
         white-space: pre;
-        line-height: 1;
-        background: linear-gradient(to right, 
-            var(--purple-2) 0%, 
-            var(--blue-2) 25%, 
-            var(--accent-2) 50%, 
-            var(--blue-2) 75%, 
-            var(--purple-2) 100%);
+        line-height: 1.1;
+        letter-spacing: 0.5px;
+        background: linear-gradient(45deg, 
+            #667eea 0%, 
+            #764ba2 25%, 
+            #f093fb 50%, 
+            #764ba2 75%, 
+            #667eea 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        background-size: 300% auto;
-        animation: textShine 3s ease-in-out infinite;
+        background-size: 300% 300%;
+        animation: astralGlow 4s linear infinite;
+        text-shadow: 0 0 10px rgba(118, 75, 162, 0.3);
     }
     
     .a2f5142ba8328dfd-text {
         position: static;
+        margin-top: 10px;
+        font-size: 14px;
+        opacity: 0.8;
+        color: var(--text-3);
+        font-family: 'DM Mono', monospace;
+        letter-spacing: 1px;
+    }
+    
+    @keyframes astralGlow {
+        0% {
+            background-position: 0% 50%;
+            text-shadow: 0 0 10px rgba(118, 75, 162, 0.3);
+        }
+        25% {
+            background-position: 50% 50%;
+            text-shadow: 0 0 15px rgba(118, 75, 162, 0.5);
+        }
+        50% {
+            background-position: 100% 50%;
+            text-shadow: 0 0 20px rgba(118, 75, 162, 0.7);
+        }
+        75% {
+            background-position: 50% 50%;
+            text-shadow: 0 0 15px rgba(118, 75, 162, 0.5);
+        }
+        100% {
+            background-position: 0% 50%;
+            text-shadow: 0 0 10px rgba(118, 75, 162, 0.3);
+        }
+    }
+}
+
+@container body style(--ascii-loader: astralCosmic) {
+    .a2f5142ba8328dfd-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        position: relative;
+    }
+    
+    .a2f5142ba8328dfd-content > .a2f5142ba8328dfd-spinner {
+        display: none;
+    }
+    
+    .a2f5142ba8328dfd-content::before {
+        content: ' ______     ______     ______   ______     ______     __            __         ______     __  __     __   __     ______     __  __     ______     ______    \A/\  __ \   /\  ___\   /\__  _\ /\  == \   /\  __ \   /\ \          /\ \       /\  __ \   /\ \/\ \   /\ "-.\ \   /\  ___\   /\ \_\ \   /\  ___\   /\  == \   \A\ \  __ \  \ \___  \  \/_/\ \/ \ \  __<   \ \  __ \  \ \ \____     \ \ \____  \ \  __ \  \ \ \_\ \  \ \ \-.  \  \ \ \____  \ \  __ \  \ \  __\   \ \  __<   \A \ \_\ \_\  \/\_____\    \ \_\  \ \_\ \_\  \ \_\ \_\  \ \_____\     \ \_____\  \ \_\ \_\  \ \_____\  \ \_\\"\_\  \ \_____\  \ \_\ \_\  \ \_____\  \ \_\ \_\ \A  \/_/\/_/   \/_____/     \/_/   \/_/ /_/   \/_/\/_/   \/_____/      \/_____/   \/_/\/_/   \/_____/   \/_/ \/_/   \/_____/   \/_/\/_/   \/_____/   \/_/ /_/ ';
+        display: block;
+        font-size: 9px;
+        font-family: 'Courier New', monospace;
+        font-weight: bold;
+        white-space: pre;
+        line-height: 1.1;
+        letter-spacing: 0.5px;
+        color: transparent;
+        background: 
+            linear-gradient(45deg, 
+                #667eea 0%, 
+                #764ba2 20%, 
+                #9d4edd 40%, 
+                #c77dff 60%, 
+                #764ba2 80%, 
+                #667eea 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 400% 400%;
+        animation: 
+            astralFlow 6s ease-in-out infinite,
+            astralPulse 3s ease-in-out infinite;
+        position: relative;
+        z-index: 2;
+    }
+    
+    /* Добавляем звездный фон */
+    .a2f5142ba8328dfd-content::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: 
+            radial-gradient(2px 2px at 20% 30%, rgba(255,255,255,0.3) 1px, transparent 2px),
+            radial-gradient(1px 1px at 40% 70%, rgba(255,255,255,0.2) 1px, transparent 2px),
+            radial-gradient(2px 2px at 60% 20%, rgba(255,255,255,0.4) 1px, transparent 2px),
+            radial-gradient(1px 1px at 80% 50%, rgba(255,255,255,0.2) 1px, transparent 2px),
+            radial-gradient(2px 2px at 30% 80%, rgba(255,255,255,0.3) 1px, transparent 2px);
+        background-size: 200px 200px;
+        animation: starsTwinkle 4s ease-in-out infinite;
+        z-index: 1;
+    }
+    
+    .a2f5142ba8328dfd-text {
+        position: static;
+        margin-top: 15px;
+        font-size: 13px;
+        opacity: 0.7;
+        color: var(--text-3);
+        font-family: 'DM Mono', monospace;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        z-index: 2;
+        background: linear-gradient(90deg, 
+            transparent 0%, 
+            var(--accent-2) 50%, 
+            transparent 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 200% 100%;
+        animation: subtitleShine 3s ease-in-out infinite;
+    }
+    
+    @keyframes astralFlow {
+        0%, 100% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+    }
+    
+    @keyframes astralPulse {
+        0%, 100% {
+            opacity: 1;
+            filter: drop-shadow(0 0 5px rgba(118, 75, 162, 0.3));
+        }
+        50% {
+            opacity: 0.9;
+            filter: drop-shadow(0 0 15px rgba(118, 75, 162, 0.6));
+        }
+    }
+    
+    @keyframes starsTwinkle {
+        0%, 100% {
+            opacity: 0.3;
+        }
+        50% {
+            opacity: 0.7;
+        }
+    }
+    
+    @keyframes subtitleShine {
+        0%, 100% {
+            background-position: -100% 0;
+        }
+        50% {
+            background-position: 200% 0;
+        }
     }
 }
 

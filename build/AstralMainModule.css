@@ -56,7 +56,7 @@ body {
     --unrounding: on;
     --custom-spotify-bar: on;
     --ascii-titles: on;
-    --ascii-loader: system24;
+    --ascii-loader: astral;
     --panel-labels: on;
 }
 
@@ -214,6 +214,42 @@ body {
         50.0001% {
             background-position: -100% 50%;
         }
+    }
+}
+
+@container body style(--ascii-loader: astral) {
+    .a2f5142ba8328dfd-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .a2f5142ba8328dfd-content > .a2f5142ba8328dfd-spinner {
+        display: none;
+    }
+    
+    .a2f5142ba8328dfd-content::before {
+        content: 'Astral Launcher';
+        display: block;
+        font-size: 24px;
+        font-family: 'DM Mono', monospace;
+        font-weight: 500;
+        letter-spacing: 2px;
+        background: linear-gradient(45deg, 
+            var(--purple-2) 0%, 
+            var(--blue-2) 25%, 
+            var(--accent-2) 50%, 
+            var(--blue-2) 75%, 
+            var(--purple-2) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 300% auto;
+        animation: textShine 3s ease-in-out infinite;
+    }
+    
+    .a2f5142ba8328dfd-text {
+        position: static;
     }
 }
 

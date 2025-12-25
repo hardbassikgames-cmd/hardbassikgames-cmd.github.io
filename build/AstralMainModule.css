@@ -222,7 +222,7 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 20px;
+        gap: 24px;
     }
     
     .a2f5142ba8328dfd-content > .a2f5142ba8328dfd-spinner {
@@ -230,26 +230,43 @@ body {
     }
     
     .a2f5142ba8328dfd-content::before {
-        content: 'Astral Launcher';
+        content: 'A S T R A L   L A U N C H E R';
         display: block;
-        font-size: 24px;
+        font-size: 20px;
         font-family: 'DM Mono', monospace;
-        font-weight: 500;
-        letter-spacing: 2px;
-        background: linear-gradient(45deg, 
-            var(--purple-2) 0%, 
-            var(--blue-2) 25%, 
-            var(--accent-2) 50%, 
-            var(--blue-2) 75%, 
-            var(--purple-2) 100%);
+        font-weight: 400;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: transparent;
+        background: 
+            linear-gradient(90deg, 
+                transparent 0%, 
+                var(--accent-2) 50%, 
+                transparent 100%),
+            linear-gradient(90deg, 
+                var(--purple-2) 0%, 
+                var(--blue-2) 50%, 
+                var(--purple-2) 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        background-size: 300% auto;
-        animation: textShine 3s ease-in-out infinite;
+        background-size: 200% 100%, 300% 100%;
+        animation: 
+            shine 2s ease-in-out infinite,
+            gradientFlow 4s linear infinite;
     }
     
     .a2f5142ba8328dfd-text {
         position: static;
+    }
+    
+    @keyframes shine {
+        0%, 100% { background-position: -100% 0, 0 0; }
+        50% { background-position: 200% 0, 0 0; }
+    }
+    
+    @keyframes gradientFlow {
+        0% { background-position: 0 0, 0 0; }
+        100% { background-position: 0 0, 300% 0; }
     }
 }
 

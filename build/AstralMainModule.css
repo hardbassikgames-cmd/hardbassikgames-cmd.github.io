@@ -351,38 +351,8 @@ body {
         display: none;
     }
     
-    /* Заменяем ::before на отдельный элемент */
-    .a2f5142ba8328dfd-content .ascii-art-loader {
-        content: '';
-        display: block;
-        width: 400px;
-        height: 80px;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='80'%3E%3Ctext x='0' y='12' font-family='Courier New' font-size='9' font-weight='bold' fill='%23667eea'%3E ______     ______     ______   ______     ______     __            __         ______     __  __     __   __     ______     __  __     ______     ______    %3C/text%3E%3Ctext x='0' y='24' font-family='Courier New' font-size='9' font-weight='bold' fill='%23764ba2'%3E/\\  __ \\   /\\  ___\\   /\\__  _\\ /\\  == \\   /\\  __ \\   /\\ \\          /\\ \\       /\\  __ \\   /\\ \\/\\ \\   /\\ %22-.\\ \\   /\\  ___\\   /\\ \\_\\ \\   /\\  ___\\   /\\  == \\   %3C/text%3E%3Ctext x='0' y='36' font-family='Courier New' font-size='9' font-weight='bold' fill='%239d4edd'%3E\\ \\  __ \\  \\ \\___  \\  \\/_/\\ \\/ \\ \\  __%3C   \\ \\  __ \\  \\ \\ \\____     \\ \\ \\____  \\ \\  __ \\  \\ \\ \\_\\ \\  \\ \\ -.  \\  \\ \\ \\____  \\ \\  __ \\  \\ \\  __\\   \\ \\  __%3C   %3C/text%3E%3Ctext x='0' y='48' font-family='Courier New' font-size='9' font-weight='bold' fill='%23c77dff'%3E \\ \\_\\ \\_\\  \\/\\_____\\    \\ \\_\\  \\ \\_\\ \\_\\  \\ \\_\\ \\_\\  \\ \\_____\\     \\ \\_____\\  \\ \\_\\ \\_\\  \\ \\_____\\  \\ \\_%5C%22\\_\\  \\ \\_____\\  \\ \\_\\ \\_\\  \\ \\_____\\  \\ \\_\\ \\_\\ %3C/text%3E%3Ctext x='0' y='60' font-family='Courier New' font-size='9' font-weight='bold' fill='%23764ba2'%3E  \\/_/\\/_/   \\/_____/     \\/_/   \\/_/ /_/   \\/_/\\/_/   \\/_____/      \\/_____/   \\/_/\\/_/   \\/_____/   \\/_/ \\/_/   \\/_____/   \\/_/\\/_/   \\/_____/   \\/_/ /_/ %3C/text%3E%3C/svg%3E");
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        animation: astralFlow 6s ease-in-out infinite;
-        position: relative;
-        z-index: 2;
-    }
-    
-    /* ИЛИ более простой вариант с base64 изображением */
     .a2f5142ba8328dfd-content::before {
-        content: '';
-        display: block;
-        width: 400px;
-        height: 80px;
-        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAABQCAYAAADEEsZNAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAWoSURBVHgB7d1BbhRHFIXhOywAEQvBQUZZAIkQ7ABWSywAlgCRBRBCLEBJHEUeEGFEgiSTd6ruK7fu76NTalup5r+//e7MbG5ubp4vAKCjV7u7u1d3d3cXAPCivb09/8UfIAB6e/369dOHh4c/AaCzV69evdne3j49Ojq6BIAO9vb2TnZ2dk5ev379DgA6OTg4OD8+Pj4/Ojq6BIAO3r17d/X+/fur4+PjSwDo4P3799cfPny4fv/+/TUA9DAzEACYmkAmkAkAK4gEkUBiAiAJIoEkAySJpJIEkkwygCSZTAYIAIxMIBPIBIBfJBAJZAAkkkQyQAAgIoFMIABMIJNJBkgimUwGSCIZQABgZAKZQCYAGCBJJJMMkGSSASSRTDKAAICIBDKBQCaQyWSAJJBMMoAAwMgEMoFMIJNJMgMkgUwmAwiAkQlkAplMZgIZIAlkkgyQAWQyAwiAkQlkAplMxgwEACISyAQymWQGSBJJJgMIAMxMIJNJcoAkkkkygAzgP28AA4CRCeQhE8hkkslkBkgCyWSAJJBJJhAAmJlAHjKZTDKZDJABZJIBkkAyyQABgJEJ5CGTyQAZwM9vIAMkkEwygAyQSSYQAJiZQJ4ymcFkgAwggUwGCABEJJCPTCCZQQbIADLJAAGAqQnkMy8QABiZQKaTARJIJs80A0gCySQDZABJMgMEAEYmkM8eMoFMIJlkMkASyCQDCABEJJBJ5iETSAJ5vplABkgCmWQCGcD6g8kAAYCRCeTzQ2aATDKBJJBJBggARCQQM5lPMs80AySATDKBjJxJqY4kE8jIl5PqSB4ygYy8GVVH8pAJZOTNqDqSh8zkk8nZ3/WOQ/pHakL8X6Wjz1vC9cf6w/0V3af8Qf5S/5CzV79+f4r8U//A3/JfVwWXp+vv7q9p1h/tX/LvHdW3V3+K/6p/f/zxPxM6UelWfYrVAAAAAElFTkSuQmCC');
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        animation: astralFlow 6s ease-in-out infinite;
-        position: relative;
-        z-index: 2;
-    }
-    
-    /* Альтернативный вариант с сохранением текстового контента */
-    .a2f5142ba8328dfd-content .ascii-text {
+        content: ' ______     ______     ______   ______     ______     __            __         ______     __  __     __   __     ______     __  __     ______     ______    /\  __ \   /\  ___\   /\__  _\ /\  == \   /\  __ \   /\ \          /\ \       /\  __ \   /\ \/\ \   /\ \"-.\ \   /\  ___\   /\ \_\ \   /\  ___\   /\  == \   \ \  __ \  \ \___  \  \/_/\ \/ \ \  __<   \ \  __ \  \ \ \____     \ \ \____  \ \  __ \  \ \ \_\ \  \ \ \-.  \  \ \ \____  \ \  __ \  \ \  __\   \ \  __<    \ \_\ \_\  \/\_____\    \ \_\  \ \_\ \_\  \ \_\ \_\  \ \_____\     \ \_____\  \ \_\ \_\  \ \_____\  \ \_\\"\_\  \ \_____\  \ \_\ \_\  \ \_____\  \ \_\ \_\  \/_/\/_/   \/_____/     \/_/   \/_/ /_/   \/_/\/_/   \/_____/      \/_____/   \/_/\/_/   \/_____/   \/_/ \/_/   \/_____/   \/_/\/_/   \/_____/   \/_/ /_/ ';
         display: block;
         font-size: 9px;
         font-family: 'Courier New', monospace;
@@ -405,27 +375,8 @@ body {
         animation: 
             astralFlow 6s ease-in-out infinite,
             astralPulse 3s ease-in-out infinite;
-        text-align: center;
-        margin: 0 auto;
-        max-width: 400px;
-    }
-    
-    /* Упрощенный текстовый вариант */
-    .a2f5142ba8328dfd-content::before {
-        content: " ______     ______     ______   ______     ______     __            __         ______     __  __     __   __     ______     __  __     ______     ______    /\  __ \   /\  ___\   /\__  _\ /\  == \   /\  __ \   /\ \          /\ \       /\  __ \   /\ \/\ \   /\ \"-.\ \   /\  ___\   /\ \_\ \   /\  ___\   /\  == \   \ \  __ \  \ \___  \  \/_/\ \/ \ \  __<   \ \  __ \  \ \ \____     \ \ \____  \ \  __ \  \ \ \_\ \  \ \ \-.  \  \ \ \____  \ \  __ \  \ \  __\   \ \  __<    \ \_\ \_\  \/\_____\    \ \_\  \ \_\ \_\  \ \_\ \_\  \ \_____\     \ \_____\  \ \_\ \_\  \ \_____\  \ \_\\"\_\  \ \_____\  \ \_\ \_\  \ \_____\  \ \_\ \_\  \/_/\/_/   \/_____/     \/_/   \/_/ /_/   \/_/\/_/   \/_____/      \/_____/   \/_/\/_/   \/_____/   \/_/ \/_/   \/_____/   \/_/\/_/   \/_____/   \/_/ /_/ ";
-        display: block;
-        font-size: 7px; /* Уменьшаем размер */
-        font-family: 'Courier New', monospace;
-        font-weight: bold;
-        white-space: pre-wrap; /* Изменяем на pre-wrap */
-        word-wrap: break-word;
-        line-height: 1.1;
-        letter-spacing: 0.3px;
-        color: #667eea;
-        text-align: center;
-        max-width: 400px;
-        margin: 0 auto;
-        animation: astralFlow 6s ease-in-out infinite;
+        position: relative;
+        z-index: 2;
     }
     
     /* Добавляем звездный фон */

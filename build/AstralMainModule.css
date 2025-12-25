@@ -165,7 +165,7 @@ body {
 }
 
 @property --ascii-loader {
-    syntax: 'off | system24 | cats';
+    syntax: 'off | system24 | cats | astral';
     inherits: false;
     initial-value: system24;
 }

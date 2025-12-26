@@ -46,7 +46,7 @@
 
 /*---------- Ace 904051099244310578 ----------*/
 .userProfileInner_c69a7b:has(.avatar__44b0c[src*="904051099244310578"]) .container__8061a::before {
-    --badges_img: url(https://feorev.github.io/Themes/Discord/assets/HomeIcon/IconSelected.png);
+    --badges_img: url(https://feorev.github.io/Themes/Discord/FVUI/Addons/Badges/802381130916954132.png);
 }
 .userProfileInner_c69a7b:has(.avatar__44b0c[src*="904051099244310578"]) .container__8061a:hover::after {
     content: "Test123";

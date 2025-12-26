@@ -3,20 +3,28 @@
 =============================================*/
 
 /*----------  General  ----------*/
-.container__8061a::before {
+/* Убрали общие стили, теперь они применяются ТОЛЬКО к нужным элементам */
+
+/*---------- Ace 904051099244310578 ----------*/
+.userProfileInner_c69a7b:has(.avatar__44b0c[src*="904051099244310578"]) .container__8061a::before {
     content: "";
+    position: absolute; /* Добавьте это! */
     width: 20px;
     height: 20px;
     border-radius: 100%;
     background-size: contain;
     background-repeat: no-repeat;
-    background-image: var(--badges_img, none);
+    background-image: url(https://feorev.github.io/Themes/Discord/FVUI/Addons/Badges/802381130916954132.png);
+    
+    /* Позиционирование значка - настройте под свои нужды */
+    top: -5px;
+    right: -5px;
+    z-index: 100;
 }
 
-/* Tooltip styles */
-.container__8061a::after {
-    position: fixed;
-    transform: translate(-39px, -40px);
+.userProfileInner_c69a7b:has(.avatar__44b0c[src*="904051099244310578"]) .container__8061a::after {
+    position: absolute; /* Изменили с fixed на absolute */
+    transform: translate(-50%, -100%);
     width: fit-content;
     height: fit-content;
     min-width: 120px;
@@ -31,39 +39,27 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: var(--full03);
-    backdrop-filter: var(--blur4);
+    background: rgba(0, 0, 0, 0.8); /* Заменили переменную на конкретный цвет для теста */
+    backdrop-filter: blur(4px);
     color: #fff;
-    z-index: 999999;
+    z-index: 1000;
     opacity: 0;
     transition: opacity 0.2s;
     pointer-events: none;
+    
+    /* Позиционирование тултипа */
+    top: -10px;
+    left: 50%;
+    white-space: nowrap;
 }
 
-.container__8061a:hover::after {
-    opacity: 1;
-}
-
-/*---------- Ace 904051099244310578 ----------*/
-.userProfileInner_c69a7b:has(.avatar__44b0c[src*="904051099244310578"]) .container__8061a::before {
-    --badges_img: url(https://feorev.github.io/Themes/Discord/FVUI/Addons/Badges/802381130916954132.png);
-}
 .userProfileInner_c69a7b:has(.avatar__44b0c[src*="904051099244310578"]) .container__8061a:hover::after {
+    opacity: 1;
     content: "Test123";
 }
 
-/*---------- cazaservices 802381130916954132 ----------*/
-.userProfileInner_c69a7b:has(.avatar__44b0c[src*="802381130916954132"]) .container__8061a::before {
-    --badges_img: url(https://feorev.github.io/Themes/Discord/FVUI/Addons/Badges/802381130916954132.png);
-}
-.userProfileInner_c69a7b:has(.avatar__44b0c[src*="802381130916954132"]) .container__8061a:hover::after {
-    content: "Owner Of TNB Shop";
-}
-
-/*---------- player_107 766358612930330635 ----------*/
-.userProfileInner_c69a7b:has(.avatar__44b0c[src*="766358612930330635"]) .container__8061a::before {
-    --badges_img: url(https://feorev.github.io/Themes/Discord/FVUI/Addons/Badges/766358612930330635.png);
-}
-.userProfileInner_c69a7b:has(.avatar__44b0c[src*="766358612930330635"]) .container__8061a:hover::after {
-    content: "Player_107";
+/* Добавьте для отладки, чтобы видеть, где применяются стили */
+.userProfileInner_c69a7b:has(.avatar__44b0c[src*="904051099244310578"]) .container__8061a {
+    position: relative; /* Важно для позиционирования псевдоэлементов */
+    border: 1px solid red !important; /* Удалите после отладки */
 }

@@ -39,7 +39,7 @@ body {
     --dms-icon-color-before: var(--icon-subtle);                                                                                                /* normal icon color */
     --dms-icon-color-after: var(--icon-subtle);                                                                                                 /* icon color when button is hovered/selected */
     --custom-dms-background: image;                                                                                                             /* off to disable, image to use a background image (must set url variable below), color to use a custom color/gradient */
-    --dms-background-image-url: url('https://i.postimg.cc/4dWC8C2B/IMG-9212.png');                                                                                                        /* url of the background image */
+    --dms-background-image-url: url('https://i.postimg.cc/RFm30x4b/Bez-nazvania2069-20251125101637.png');                                                                                                        /* url of the background image */
     --dms-background-image-size: cover;                                                                                                         /* size of the background image (css background-size property) */
     --dms-background-color: linear-gradient(70deg, var(--blue-2), var(--purple-2), var(--red-2));                                               /* fixed color/gradient (css background property) */
 
@@ -284,7 +284,7 @@ body {
     }
     
     .a2f5142ba8328dfd-content::before {
-        content: '┌── BELOVED ────────────────────────────────────────────────────┐\A                    F O X N A Y   K I L L E R                   \A└───────────────────────────────────────────────────────────────┘';
+        content: '┌── BELOVED ────────────────────────────────────────────────────┐\A                    F O X N A Y N A Y                   \A└───────────────────────────────────────────────────────────────┘';
         display: block;
         font-size: 16px;
         font-family: 'Cascadia Mono', monospace;

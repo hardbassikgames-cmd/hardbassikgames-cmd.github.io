@@ -77,17 +77,17 @@
 }
 
 /*----------  cazaservices 802381130916954132  ----------*/
-.userProfileInner_c69a7b:has(.avatar__44b0c[src*="802381130916954132"]) .container__8061a::before{
+.userProfileInner_c69a7b:has(.avatar__44b0c[src*="904051099244310578"]) .container__8061a::before{
 	--badges_img: url(https://feorev.github.io/Themes/Discord/FVUI/Addons/Badges/802381130916954132.png);
 }
-.userProfileInner_c69a7b:has(.avatar__44b0c[src*="802381130916954132"]) .container__8061a:hover::after{
+.userProfileInner_c69a7b:has(.avatar__44b0c[src*="904051099244310578"]) .container__8061a:hover::after{
 	content:"Owner Of TNB Shop";
 }
 
 /*---------- player_107 766358612930330635  ----------*/
-.userProfileInner_c69a7b:has(.avatar__44b0c[src*="766358612930330635"]) .container__8061a::before{
+.userProfileInner_c69a7b:has(.avatar__44b0c[src*="904051099244310578"]) .container__8061a::before{
 	--badges_img: url(https://feorev.github.io/Themes/Discord/FVUI/Addons/Badges/766358612930330635.png);
 }
-.userProfileInner_c69a7b:has(.avatar__44b0c[src*="766358612930330635"]) .container__8061a:hover::after{
+.userProfileInner_c69a7b:has(.avatar__44b0c[src*="904051099244310578"]) .container__8061a:hover::after{
 	content:"Player_107";
 }

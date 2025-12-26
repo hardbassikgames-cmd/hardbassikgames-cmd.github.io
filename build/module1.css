@@ -1,0 +1,227 @@
+/* 
+Исправленная версия скрипта экрана загрузки для Astral Launcher
+Основные изменения:
+1. Исправлен синтаксис @import для шрифтов
+2. Убраны повторяющиеся объявления :root
+3. Упрощена структура переменных
+4. Добавлены недостающие анимации
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');  /* font */
+@import url('https://fonts.cdnfonts.com/css/anurati');
+
+:root {
+  --FVUI: "LOADING";
+  --font: "Comfortaa";
+  --version: "Astral Launcher v0.2.6";
+  
+  /* Colors for users customization - темная тема (по умолчанию) */
+  --color1: 30, 40, 50;   /* Additional BG */
+  --color2: 9, 18, 24;    /* Background */
+  --color3: 35, 120, 200; /* Blue - основной цвет загрузки */
+  --color4: 63, 43, 150;  /* Gradient Color */
+  
+  --text1: 174, 174, 174; /* accent */
+  --text2: 107, 107, 107; /* no accent */
+  
+  /* Основные цвета в формате RGB */
+  --color01: rgb(var(--color1));
+  --color02: rgb(var(--color2));
+  --color03: rgb(var(--color3));
+  --color04: rgb(var(--color4));
+  
+  /* Текстовые цвета */
+  --text01: rgb(var(--text1));
+  --text02: rgb(var(--text2));
+  
+  /* Параметры прозрачности */
+  --ColorOpacity: 1;
+  --DisableOpacity: 0;
+  
+  /* Полупрозрачные варианты для эффектов */
+  --opacity03: rgba(var(--color3), calc(var(--ColorOpacity) * 0.5 * (1 - var(--DisableOpacity)) + var(--DisableOpacity)));
+  --opacity03a: rgba(var(--color3), calc(var(--ColorOpacity) * 0.2 * (1 - var(--DisableOpacity)) + var(--DisableOpacity)));
+  
+  /* Длительность анимации загрузки */
+  --loading-screen: 3s;
+}
+
+/* Светлая тема */
+:root.theme-light {
+  --color1: 211, 204, 227;
+  --color2: 219, 219, 219;
+  --color3: 96, 205, 255;
+  --color4: 63, 43, 150;
+}
+
+/*=============================================
+=                Анимации                    =
+=============================================*/
+
+/* Fade-out анимация */
+@keyframes fade-out {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* Hide анимация */
+@keyframes hide {
+  0% { visibility: visible; }
+  100% { visibility: hidden; }
+}
+
+/* Анимация ошибки (если что-то пошло не так) */
+@keyframes loaderr {
+  to {
+    --version: "Make sure you used at least one of the subthemes OR did not break the syntax. If this doesn't help, reinstall the theme.";
+    --FVUI: "Error.";
+    pointer-events: none;
+    backdrop-filter: none;
+    background: rgba(var(--color2), 0.4);
+  }
+}
+
+/* Эффект размытия и масштабирования */
+@keyframes loading-effects {
+  0% {
+    filter: blur(4px);
+    transform: scale(1);
+  }
+  50% {
+    filter: blur(25px);
+    transform: scale(1.1);
+  }
+}
+
+/* Анимация фонового свечения */
+@keyframes loading-bg {
+  0% {
+    box-shadow: 0px 0px 100px 30px inset var(--color03);
+  }
+  50% {
+    box-shadow: 0px 0px 100px 50px inset var(--color03);
+    filter: blur(100px);
+  }
+  70% {
+    box-shadow: 0px 0px 30px 50px inset var(--color03);
+  }
+  100% {
+    box-shadow: none;
+  }
+}
+
+/* Анимация размытия/резкости заголовка */
+@keyframes loadingscreen_unblur_title {
+  0% {
+    filter: blur(12px);
+    text-shadow: 0 0 500px var(--color03);
+  }
+  50% {
+    filter: blur(0px);
+    text-shadow: 0 0 10px currentColor, 0 0 20px currentColor;
+  }
+  100% {
+    filter: blur(36px);
+    text-shadow: 0 0 500px var(--color03);
+  }
+}
+
+/*=============================================
+=              Стили экрана загрузки         =
+=============================================*/
+
+/* Основной контейнер приложения - эффект размытия */
+.app_a3002d {
+  animation: loading-effects var(--loading-screen) !important;
+}
+
+/* Фоновое свечение */
+#app-mount::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  pointer-events: none;
+  
+  box-shadow: 0 0 100px 30px inset var(--color03);
+  animation: 
+    loading-bg var(--loading-screen) alternate ease-in-out,
+    fade-out var(--loading-screen) ease-in-out forwards 1s,
+    hide var(--loading-screen) linear forwards var(--loading-screen);
+}
+
+/* Контейнер для текста загрузки */
+.containerTop__45edc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0 !important;
+  bottom: 0 !important;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10000;
+  font-weight: bold;
+  
+  animation: 
+    fade-out var(--loading-screen) ease-in-out forwards 1s,
+    hide var(--loading-screen) linear forwards var(--loading-screen),
+    loaderr forwards 1s 5s !important;
+}
+
+/* Основной текст загрузки */
+.containerTop__45edc::after {
+  content: var(--FVUI);
+  position: absolute;
+  font-family: 'Anurati', 'Comfortaa', sans-serif !important;
+  text-transform: uppercase;
+  font-size: 150px;
+  color: var(--color03);
+  text-shadow: 0 0 10px currentColor, 0 0 20px currentColor;
+  animation: loadingscreen_unblur_title 3s forwards;
+}
+
+/* Версия темы (подпись) */
+.containerTop__45edc::before {
+  content: var(--version);
+  position: absolute;
+  bottom: 50px;
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 20px;
+  color: var(--color03);
+  text-align: center;
+  width: 100%;
+}
+
+/*=============================================
+=         Адаптация для разных экранов       =
+=============================================*/
+
+@media (max-width: 1200px) {
+  .containerTop__45edc::after {
+    font-size: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  .containerTop__45edc::after {
+    font-size: 80px;
+  }
+  
+  .containerTop__45edc::before {
+    font-size: 16px;
+    bottom: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .containerTop__45edc::after {
+    font-size: 60px;
+  }
+  
+  .containerTop__45edc::before {
+    font-size: 14px;
+    bottom: 20px;
+  }
+}

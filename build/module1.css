@@ -16,13 +16,13 @@
   --version: "Astral Launcher v0.2.6";
   
   /* Colors for users customization - темная тема (по умолчанию) */
-  --color1: 30, 40, 50;   /* Additional BG */
-  --color2: 9, 18, 24;    /* Background */
-  --color3: 35, 120, 200; /* Blue - основной цвет загрузки */
-  --color4: 63, 43, 150;  /* Gradient Color */
+  --color1: 25, 26, 34;   /* Additional BG */
+  --color2: 25, 26, 34;    /* Background */
+  --color3: 239, 237, 246; /* Blue - основной цвет загрузки */
+  --color4: 94, 104, 206;  /* Gradient Color */
   
-  --text1: 174, 174, 174; /* accent */
-  --text2: 107, 107, 107; /* no accent */
+  --text1: 94, 104, 206; /* accent */
+  --text2: 25, 26, 34; /* no accent */
   
   /* Основные цвета в формате RGB */
   --color01: rgb(var(--color1));
@@ -149,37 +149,6 @@
     loading-bg var(--loading-screen) alternate ease-in-out,
     fade-out var(--loading-screen) ease-in-out forwards 1s,
     hide var(--loading-screen) linear forwards var(--loading-screen);
-}
-
-/* Контейнер для текста загрузки */
-.containerTop__45edc {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  left: 0 !important;
-  bottom: 0 !important;
-  width: 100vw;
-  height: 100vh;
-  z-index: 10000;
-  font-weight: bold;
-  
-  animation: 
-    fade-out var(--loading-screen) ease-in-out forwards 1s,
-    hide var(--loading-screen) linear forwards var(--loading-screen),
-    loaderr forwards 1s 5s !important;
-}
-
-/* Основной текст загрузки */
-.containerTop__45edc::after {
-  content: var(--FVUI);
-  position: absolute;
-  font-family: 'Anurati', 'Comfortaa', sans-serif !important;
-  text-transform: uppercase;
-  font-size: 150px;
-  color: var(--color03);
-  text-shadow: 0 0 10px currentColor, 0 0 20px currentColor;
-  animation: loadingscreen_unblur_title 3s forwards;
 }
 
 /* Версия темы (подпись) */

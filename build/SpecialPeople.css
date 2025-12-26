@@ -1,0 +1,109 @@
+/*=============================================
+=                   Badges                   =
+=============================================*/
+
+/*----------  General  ----------*/
+
+.userProfileInner_c69a7b:has( /* img */
+	.avatar__44b0c[src*="489785940546551831"],
+	.avatar__44b0c[src*="802381130916954132"],
+	.avatar__44b0c[src*="835541619910377493"],
+	.avatar__44b0c[src*="766358612930330635"],
+	.avatar__44b0c[src*="932840579128250448"],
+	.avatar__44b0c[src*="895303052595171348"],
+	.avatar__44b0c[src*="992777461857259610"],
+	.avatar__44b0c[src*="950112422864232449"],
+	.avatar__44b0c[src*="486130080263700480"],
+	.avatar__44b0c[src*="1121423889914937406"],
+	.avatar__44b0c[src*="615359270367526912"]
+)
+.container__8061a::before{
+	content:"";
+
+	width: 20px;
+	height: 20px;
+
+	border-radius: 100%;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-image: var(--badges_img)!important;
+}
+
+.body__5be3e{
+	z-index: 5;
+}
+
+#app-mount .userProfileInner_c69a7b:has( /* text */ 
+	.avatar__44b0c[src*="489785940546551831"],
+	.avatar__44b0c[src*="802381130916954132"],
+	.avatar__44b0c[src*="835541619910377493"],
+	.avatar__44b0c[src*="766358612930330635"],
+	.avatar__44b0c[src*="932840579128250448"],
+	.avatar__44b0c[src*="895303052595171348"],
+	.avatar__44b0c[src*="992777461857259610"],
+	.avatar__44b0c[src*="950112422864232449"],
+	.avatar__44b0c[src*="486130080263700480"],
+	.avatar__44b0c[src*="1121423889914937406"],
+	.avatar__44b0c[src*="615359270367526912"]
+)
+.container__8061a::after{
+	position: fixed;
+
+	transform: translate(-39px, -40px);
+
+	width: fit-content;
+	height: fit-content;
+
+	min-width: 120px;
+	min-height: 29px;
+
+	padding: 4px 6px;
+	margin: 0 3px;
+
+	font-size: 14px!important;
+	font-style: normal;
+	line-height: 16px;
+	overflow-wrap: break-word;
+
+	border-radius: 8px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	background:var(--full03);
+	backdrop-filter: var(--blur4);
+
+	color:#fff;
+
+	z-index: 999999999999999999999999;
+}
+
+
+
+
+
+
+/*----------  feorev 489785940546551831  ----------*/
+.userProfileInner_c69a7b:has(.avatar__44b0c[src*="904051099244310578"]) .container__8061a::before{
+	--badges_img: url(https://feorev.github.io/Themes/Discord/assets/HomeIcon/IconSelected.png);
+}
+.userProfileInner_c69a7b:has(.avatar__44b0c[src*="904051099244310578"]) .container__8061a:hover::after{ 
+	content:"Test123";
+}
+
+/*----------  cazaservices 802381130916954132  ----------*/
+.userProfileInner_c69a7b:has(.avatar__44b0c[src*="802381130916954132"]) .container__8061a::before{
+	--badges_img: url(https://feorev.github.io/Themes/Discord/FVUI/Addons/Badges/802381130916954132.png);
+}
+.userProfileInner_c69a7b:has(.avatar__44b0c[src*="802381130916954132"]) .container__8061a:hover::after{
+	content:"Owner Of TNB Shop";
+}
+
+/*---------- player_107 766358612930330635  ----------*/
+.userProfileInner_c69a7b:has(.avatar__44b0c[src*="766358612930330635"]) .container__8061a::before{
+	--badges_img: url(https://feorev.github.io/Themes/Discord/FVUI/Addons/Badges/766358612930330635.png);
+}
+.userProfileInner_c69a7b:has(.avatar__44b0c[src*="766358612930330635"]) .container__8061a:hover::after{
+	content:"Player_107";
+}

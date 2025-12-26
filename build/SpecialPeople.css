@@ -5,17 +5,9 @@
 /*----------  General  ----------*/
 
 .userProfileInner_c69a7b:has( /* img */
-	.avatar__44b0c[src*="489785940546551831"],
+	.avatar__44b0c[src*="904051099244310578"],
 	.avatar__44b0c[src*="802381130916954132"],
 	.avatar__44b0c[src*="835541619910377493"],
-	.avatar__44b0c[src*="766358612930330635"],
-	.avatar__44b0c[src*="932840579128250448"],
-	.avatar__44b0c[src*="895303052595171348"],
-	.avatar__44b0c[src*="992777461857259610"],
-	.avatar__44b0c[src*="950112422864232449"],
-	.avatar__44b0c[src*="486130080263700480"],
-	.avatar__44b0c[src*="1121423889914937406"],
-	.avatar__44b0c[src*="615359270367526912"]
 )
 .container__8061a::before{
 	content:"";
@@ -34,17 +26,9 @@
 }
 
 #app-mount .userProfileInner_c69a7b:has( /* text */ 
-	.avatar__44b0c[src*="489785940546551831"],
+	.avatar__44b0c[src*="904051099244310578"],
 	.avatar__44b0c[src*="802381130916954132"],
 	.avatar__44b0c[src*="835541619910377493"],
-	.avatar__44b0c[src*="766358612930330635"],
-	.avatar__44b0c[src*="932840579128250448"],
-	.avatar__44b0c[src*="895303052595171348"],
-	.avatar__44b0c[src*="992777461857259610"],
-	.avatar__44b0c[src*="950112422864232449"],
-	.avatar__44b0c[src*="486130080263700480"],
-	.avatar__44b0c[src*="1121423889914937406"],
-	.avatar__44b0c[src*="615359270367526912"]
 )
 .container__8061a::after{
 	position: fixed;

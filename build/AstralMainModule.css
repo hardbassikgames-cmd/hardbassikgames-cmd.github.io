@@ -358,8 +358,8 @@ body {
         font-family: 'Cascadia Mono', monospace;
         font-weight: bold;
         white-space: pre;
-        line-height: 2;
-        letter-spacing: 1px;
+        line-height: 4;
+        letter-spacing: 0.5px;
         color: transparent;
         background: 
             linear-gradient(45deg, 

@@ -19,9 +19,9 @@
   --color1: 25, 26, 34;   /* Additional BG */
   --color2: 25, 26, 34;    /* Background */
   --color3: 239, 237, 246; /* Blue - основной цвет загрузки */
-  --color4: 94, 104, 206;  /* Gradient Color */
+  --color4: 239, 237, 246;  /* Gradient Color */
   
-  --text1: 94, 104, 206; /* accent */
+  --text1: 239, 237, 246; /* accent */
   --text2: 25, 26, 34; /* no accent */
   
   /* Основные цвета в формате RGB */

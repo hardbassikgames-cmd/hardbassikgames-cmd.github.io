@@ -1,4 +1,4 @@
-/* credits to refact0r btw */
+                /* credits to refact0r btw */
 @import url('https://refact0r.github.io/midnight-discord/build/midnight.css');
 @import url('https://fonts.googleapis.com/css2?family=Cascadia+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
 
@@ -311,7 +311,6 @@ body {
         z-index: 2;
     }
     
-    /* Добавляем звездный фон */
     .a2f5142ba8328dfd-content::after {
         content: '';
         position: absolute;

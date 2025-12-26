@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');  /* font */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
 @import url('https://fonts.cdnfonts.com/css/anurati');
 
 :root {
@@ -6,38 +6,33 @@
   --font: "Comfortaa";
   --version: "Astral Launcher v0.2.6";
   
-  /* Colors for users customization - темная тема (по умолчанию) */
-  --color1: 25, 26, 34;   /* Additional BG */
-  --color2: 25, 26, 34;    /* Background */
-  --color3: 239, 237, 246; /* Blue - основной цвет загрузки */
-  --color4: 239, 237, 246;  /* Gradient Color */
+                /* Colors for users customization - темная тема (по умолчанию) */
+  --color1: 25, 26, 34;                                                                                     /* Additional BG */
+  --color2: 25, 26, 34;                                                                                     /* Background */
+  --color3: 239, 237, 246;                                                                                  /* Blue - основной цвет загрузки */
+  --color4: 239, 237, 246;                                                                                  /* Gradient Color */
   
-  --text1: 239, 237, 246; /* accent */
-  --text2: 25, 26, 34; /* no accent */
+  --text1: 239, 237, 246;                                                                                   /* accent */
+  --text2: 25, 26, 34;                                                                                      /* no accent */
   
-  /* Основные цвета в формате RGB */
   --color01: rgb(var(--color1));
   --color02: rgb(var(--color2));
   --color03: rgb(var(--color3));
   --color04: rgb(var(--color4));
   
-  /* Текстовые цвета */
   --text01: rgb(var(--text1));
   --text02: rgb(var(--text2));
   
-  /* Параметры прозрачности */
   --ColorOpacity: 1;
   --DisableOpacity: 0;
   
-  /* Полупрозрачные варианты для эффектов */
   --opacity03: rgba(var(--color3), calc(var(--ColorOpacity) * 0.5 * (1 - var(--DisableOpacity)) + var(--DisableOpacity)));
   --opacity03a: rgba(var(--color3), calc(var(--ColorOpacity) * 0.2 * (1 - var(--DisableOpacity)) + var(--DisableOpacity)));
   
-  /* Длительность анимации загрузки */
   --loading-screen: 3s;
 }
 
-/* Светлая тема */
+                /* Светлая тема */
 :root.theme-light {
   --color1: 211, 204, 227;
   --color2: 219, 219, 219;
@@ -45,23 +40,19 @@
   --color4: 63, 43, 150;
 }
 
-/*=============================================
-=                Анимации                    =
-=============================================*/
-
-/* Fade-out анимация */
+                /* Fade-out анимация */
 @keyframes fade-out {
   0% { opacity: 1; }
   100% { opacity: 0; }
 }
 
-/* Hide анимация */
+                /* Hide анимация */
 @keyframes hide {
   0% { visibility: visible; }
   100% { visibility: hidden; }
 }
 
-/* Анимация ошибки (если что-то пошло не так) */
+                /* Анимация если чето пошло не так */
 @keyframes loaderr {
   to {
     --version: "Make sure you used at least one of the subthemes OR did not break the syntax. If this doesn't help, reinstall the theme.";
@@ -72,7 +63,7 @@
   }
 }
 
-/* Эффект размытия и масштабирования */
+            /* Эффект размытия и скейл */
 @keyframes loading-effects {
   0% {
     filter: blur(4px);
@@ -84,7 +75,7 @@
   }
 }
 
-/* Анимация фонового свечения */
+                /* Анимация фонового свечения */
 @keyframes loading-bg {
   0% {
     box-shadow: 0px 0px 100px 30px inset var(--color03);
@@ -101,7 +92,7 @@
   }
 }
 
-/* Анимация размытия/резкости заголовка */
+                /* Анимация размытия/резкости заголовка */
 @keyframes loadingscreen_unblur_title {
   0% {
     filter: blur(12px);
@@ -117,16 +108,12 @@
   }
 }
 
-/*=============================================
-=              Стили экрана загрузки         =
-=============================================*/
-
-/* Основной контейнер приложения - эффект размытия */
+                    /* Основной контейнер - эффект размытия */
 .app_a3002d {
   animation: loading-effects var(--loading-screen) !important;
 }
 
-/* Фоновое свечение */
+                    /* Фоновое свечение */
 #app-mount::before {
   content: "";
   position: absolute;
@@ -142,7 +129,7 @@
     hide var(--loading-screen) linear forwards var(--loading-screen);
 }
 
-/* Версия темы (подпись) */
+                /* Версия темы */
 .containerTop__45edc::before {
   content: var(--version);
   position: absolute;
@@ -153,10 +140,6 @@
   text-align: center;
   width: 100%;
 }
-
-/*=============================================
-=         Адаптация для разных экранов       =
-=============================================*/
 
 @media (max-width: 1200px) {
   .containerTop__45edc::after {

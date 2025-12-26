@@ -1,15 +1,14 @@
-/* =============================================
-=                   Badges                   =
-============================================= */
+/* 
+not working at all-
+- ace
+*/
 
-/*----------  General - Стили для всех значков  ----------*/
-/* Контейнер для значков в поповере профиля */
 ._80d1d57f0df6d829-container::before {
     content: "";
-    display: inline-block; /* Значок будет в строке с другими */
+    display: inline-block;
     width: 20px;
     height: 20px;
-    margin-right: 4px; /* Отступ от следующего элемента */
+    margin-right: 4px;
     border-radius: 100%;
     background-size: contain;
     background-repeat: no-repeat;
@@ -17,13 +16,12 @@
     vertical-align: middle;
 }
 
-/* Tooltip styles - Общие стили для тултипа */
 ._80d1d57f0df6d829-container {
     position: relative;
 }
 
 ._80d1d57f0df6d829-container::after {
-    content: attr(data-tooltip); /* Берем текст из атрибута */
+    content: attr(data-tooltip);
     position: absolute;
     transform: translate(-50%, -100%);
     top: -10px;
@@ -51,7 +49,6 @@
     pointer-events: none;
     z-index: 1000;
     
-    /* Тень для лучшей читаемости */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -59,30 +56,11 @@
     opacity: 1;
 }
 
-/*----------  Правило для пользователя Ace 904051099244310578  ----------*/
-/* Ищем контейнер профиля, в котором есть аватар с нужным ID */
+/*---------- Ace 904051099244310578 ----------*/
 .ce832809562bf737-popoutContainer:has(img[src*="904051099244310578"]) ._80d1d57f0df6d829-container::before {
     --badges_img: url(https://feorev.github.io/Themes/Discord/FVUI/Addons/Badges/802381130916954132.png);
 }
 
 .ce832809562bf737-popoutContainer:has(img[src*="904051099244310578"]) ._80d1d57f0df6d829-container:hover::after {
     content: "Test123";
-}
-
-/*----------  Правило для пользователя cazaservices 802381130916954132  ----------*/
-.ce832809562bf737-popoutContainer:has(img[src*="802381130916954132"]) ._80d1d57f0df6d829-container::before {
-    --badges_img: url(https://feorev.github.io/Themes/Discord/FVUI/Addons/Badges/802381130916954132.png);
-}
-
-.ce832809562bf737-popoutContainer:has(img[src*="802381130916954132"]) ._80d1d57f0df6d829-container:hover::after {
-    content: "Owner Of TNB Shop";
-}
-
-/*----------  Правило для пользователя player_107 766358612930330635  ----------*/
-.ce832809562bf737-popoutContainer:has(img[src*="766358612930330635"]) ._80d1d57f0df6d829-container::before {
-    --badges_img: url(https://feorev.github.io/Themes/Discord/FVUI/Addons/Badges/766358612930330635.png);
-}
-
-.ce832809562bf737-popoutContainer:has(img[src*="766358612930330635"]) ._80d1d57f0df6d829-container:hover::after {
-    content: "Player_107";
 }

@@ -284,7 +284,7 @@ body {
     }
     
     .a2f5142ba8328dfd-content::before {
-        content: '┌── BELOVED ────────────────────────────────────────────────────┐\A                    F O X N A Y N A Y                   \A└───────────────────────────────────────────────────────────────┘';
+        content: '┌── WELCOME ────────────────────────────────────────────────────┐\A                    H A T R E D   D E V E L O P E R             \A└───────────────────────────────────────────────────────────────┘';
         display: block;
         font-size: 16px;
         font-family: 'Cascadia Mono', monospace;
@@ -296,10 +296,10 @@ body {
         background: 
             linear-gradient(45deg, 
                 #667eea 0%, 
-                #764ba2 20%, 
-                #9d4edd 40%, 
-                #c77dff 60%, 
-                #764ba2 80%, 
+                #4b4ca2 20%, 
+                #4e98dd 40%, 
+                #7db5ff 60%, 
+                #4b69a2 80%, 
                 #667eea 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
